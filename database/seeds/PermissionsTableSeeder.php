@@ -43,7 +43,7 @@ class PermissionsTableSeeder extends Seeder {
             'name'       => 'Guest',
             'guard_name' => 'web'
         ]);
-        $admin->givePermissionTo([            
+        $guest->givePermissionTo([            
             'read tasks'
         ]);
 

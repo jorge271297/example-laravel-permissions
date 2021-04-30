@@ -41,8 +41,16 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+                        @can('list roles')
+                            <li><a href="{{route('role.index')}}">Roles</a></li>
+                        @endcan
+
+                        @can('list permissions')
+                            <li><a href="{{route('permission.index')}}">Permissions</a></li>
+                        @endcan
+
                         @can('read tasks')
-                            <li><a href="{{route('task.index')}}">task</a></li>
+                            <li><a href="{{route('task.index')}}">Task</a></li>
                         @endcan
                         <!-- Authentication Links -->
                         @guest
