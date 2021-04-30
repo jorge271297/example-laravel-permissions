@@ -8,6 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                    @can('create task')
+                    <a class="btn btn-primary" href="{{route('task.create')}}">create</a>
+                    @endcan
                     <table class="table">
                         <thead>
                             <tr>
@@ -21,14 +24,14 @@
                                 <td>1</td>
                                 <td>Task 1</td>
                                 <td>
-                                    @can('update')  
-                                        <a href="">edit</a>
+                                    @can('update task')  
+                                        <a href="{{route('task.edit', 1)}}">edit</a>
                                     @endcan
-                                    @can('update')  
-                                        <a href="">show</a>
+                                    @can('read tasks')  
+                                        <a href="{{route('task.show', 1)}}">show</a>
                                     @endcan
-                                    @can('update')  
-                                        <a href="">delate</a>
+                                    @can('delete task')  
+                                        <a href="{{route('task.destroy', 1)}}">delate</a>
                                     @endcan
                                 </td>
                             </tr>
@@ -36,18 +39,30 @@
                                 <td>2</td>
                                 <td>Task 2</td>
                                 <td>
-                                    <a href="">edit</a>
-                                    <a href="">show</a>
-                                    <a href="">delate</a>
+                                    @can('update task')  
+                                        <a href="{{route('task.edit', 1)}}">edit</a>
+                                    @endcan
+                                    @can('read tasks')  
+                                        <a href="{{route('task.show', 1)}}">show</a>
+                                    @endcan
+                                    @can('delete task')  
+                                        <a href="{{route('task.destroy', 1)}}">delate</a>
+                                    @endcan
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Task 3</td>
                                 <td>
-                                    <a href="">edit</a>
-                                    <a href="">show</a>
-                                    <a href="">delate</a>
+                                    @can('update task')  
+                                        <a href="{{route('task.edit', 1)}}">edit</a>
+                                    @endcan
+                                    @can('read tasks')  
+                                        <a href="{{route('task.show', 1)}}">show</a>
+                                    @endcan
+                                    @can('delete task')  
+                                        <a href="{{route('task.destroy', 1)}}">delate</a>
+                                    @endcan
                                 </td>
                             </tr>
                         </tbody>

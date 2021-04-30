@@ -23,7 +23,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view('task.create');
     }
 
     /**
@@ -34,7 +34,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo 'method store';
     }
 
     /**
@@ -45,7 +45,7 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('task.show');
     }
 
     /**
@@ -56,7 +56,7 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('task.update');
     }
 
     /**
@@ -68,7 +68,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo 'method update';
     }
 
     /**
@@ -79,6 +79,6 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo 'method destroy';
     }
 }
